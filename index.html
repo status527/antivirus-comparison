@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>杀毒软件对比 - 2024年最佳选择</title>
+    <title>2024年最佳杀毒软件对比 - 限时优惠</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* 内联CSS样式 */
+        /* 基础样式 */
         * {
             margin: 0;
             padding: 0;
@@ -13,14 +14,16 @@
         }
 
         body {
-            font-family: 'Microsoft YaHei', 'Segoe UI', sans-serif;
+            font-family: 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: #333;
+            background-color: #f8f9fa;
         }
 
+        /* 导航栏样式 */
         header {
             background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: fixed;
             width: 100%;
             top: 0;
@@ -32,7 +35,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 5%;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
@@ -40,44 +43,206 @@
             font-size: 1.5rem;
             font-weight: bold;
             color: #2c3e50;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo i {
+            color: #3498db;
         }
 
         nav ul {
             display: flex;
             list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 2rem;
+            gap: 2rem;
         }
 
         nav ul li a {
             text-decoration: none;
             color: #2c3e50;
             font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
         }
 
+        nav ul li a:hover {
+            background-color: #3498db;
+            color: white;
+        }
+
+        /* 英雄区域样式 */
         .hero {
             background: linear-gradient(135deg, #3498db, #2c3e50);
             color: white;
             text-align: center;
-            padding: 8rem 1rem 4rem;
+            padding: 10rem 1rem 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect fill="rgba(255,255,255,0.1)" x="0" y="0" width="100" height="100"/></svg>');
+            opacity: 0.1;
         }
 
         .hero h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
+            position: relative;
         }
 
         .hero p {
             font-size: 1.2rem;
             max-width: 600px;
             margin: 0 auto;
+            position: relative;
         }
 
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-buttons {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .hero-button {
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .primary-button {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .primary-button:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        .secondary-button {
+            background-color: rgba(255,255,255,0.2);
+            color: white;
+        }
+
+        .secondary-button:hover {
+            background-color: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+        }
+
+        .trust-badge i {
+            font-size: 1.2rem;
+        }
+
+        .testimonial {
+            background-color: #f8f9fa;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 2rem auto 0;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .guarantee {
+            background-color: #fff;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .guarantee-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .guarantee-icon {
+            font-size: 4rem;
+            color: #2ecc71;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-card .discount-badge {
+            background-color: #e74c3c;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-card .original-price {
+            text-decoration: line-through;
+            color: #95a5a6;
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+        }
+
+        .pricing-card .savings {
+            color: #e74c3c;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* 对比表格样式 */
         .comparison-table {
             padding: 4rem 1rem;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
@@ -85,42 +250,66 @@
             text-align: center;
             margin-bottom: 2rem;
             color: #2c3e50;
+            font-size: 2rem;
+        }
+
+        .table-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            background: white;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
 
         th, td {
-            padding: 1rem;
+            padding: 1.2rem;
             text-align: center;
-            border: 1px solid #ddd;
+            border-bottom: 1px solid #eee;
         }
 
         th {
             background-color: #f8f9fa;
             font-weight: 600;
+            color: #2c3e50;
         }
 
         td:first-child {
             text-align: left;
+            font-weight: 500;
+        }
+
+        .antivirus-name {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .antivirus-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            object-fit: contain;
         }
 
         .check {
             color: #2ecc71;
             font-weight: bold;
+            font-size: 1.2rem;
         }
 
         .cross {
             color: #e74c3c;
             font-weight: bold;
+            font-size: 1.2rem;
         }
 
+        /* 功能特点样式 */
         .features {
-            background-color: #f8f9fa;
+            background-color: #fff;
             padding: 4rem 1rem;
         }
 
@@ -128,22 +317,34 @@
             text-align: center;
             margin-bottom: 3rem;
             color: #2c3e50;
+            font-size: 2rem;
         }
 
         .feature-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
         .feature-card {
             background: white;
             padding: 2rem;
-            border-radius: 8px;
+            border-radius: 10px;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #3498db;
+            margin-bottom: 1rem;
         }
 
         .feature-card h3 {
@@ -151,9 +352,10 @@
             color: #2c3e50;
         }
 
+        /* 价格方案样式 */
         .pricing {
             padding: 4rem 1rem;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
@@ -161,28 +363,39 @@
             text-align: center;
             margin-bottom: 3rem;
             color: #2c3e50;
+            font-size: 2rem;
         }
 
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
         .pricing-card {
             background: white;
             padding: 2rem;
-            border-radius: 8px;
+            border-radius: 10px;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
         }
 
         .pricing-card.featured {
             border: 2px solid #3498db;
+            transform: scale(1.05);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-5px);
         }
 
         .price {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: bold;
             color: #2c3e50;
             margin: 1rem 0;
@@ -199,17 +412,72 @@
         }
 
         .pricing-card ul li {
-            margin: 0.5rem 0;
+            margin: 0.8rem 0;
             color: #7f8c8d;
         }
 
+        .cta-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        .cta-button:hover {
+            background-color: #2980b9;
+        }
+
+        /* 页脚样式 */
         footer {
             background-color: #2c3e50;
             color: white;
             padding: 4rem 1rem 1rem;
-            text-align: center;
         }
 
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin: 0.5rem 0;
+        }
+
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #3498db;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* 响应式设计 */
         @media (max-width: 768px) {
             nav {
                 flex-direction: column;
@@ -218,10 +486,12 @@
 
             nav ul {
                 margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
             nav ul li {
-                margin: 0 1rem;
+                margin: 0.5rem;
             }
 
             .hero {
@@ -231,133 +501,333 @@
             .hero h1 {
                 font-size: 2rem;
             }
+
+            .pricing-card.featured {
+                transform: none;
+            }
+
+            .pricing-card.featured:hover {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* 动画效果 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .feature-card, .pricing-card {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        /* 新增样式 */
+        .promo-banner {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            z-index: 1001;
+        }
+
+        .promo-banner p {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .countdown {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            margin-left: 1rem;
         }
     </style>
 </head>
 <body>
+    <div class="promo-banner">
+        <p>限时优惠：所有套餐立减50% <span class="countdown">剩余时间：23:59:59</span></p>
+    </div>
+
     <header>
         <nav>
-            <div class="logo">杀毒软件对比</div>
+            <a href="#" class="logo">
+                <i class="fas fa-shield-alt"></i>
+                杀毒软件对比
+            </a>
             <ul>
                 <li><a href="#comparison">对比</a></li>
                 <li><a href="#features">功能</a></li>
                 <li><a href="#pricing">价格</a></li>
+                <li><a href="#contact">联系我们</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="hero">
-            <h1>选择最适合您的杀毒软件</h1>
-            <p>对比主流杀毒软件，为您的设备选择最佳保护方案</p>
+            <div class="hero-content">
+                <h1>保护您的数字生活</h1>
+                <p>选择专业杀毒软件，享受全方位的网络安全保护。现在购买可享受50%优惠！</p>
+                <div class="hero-buttons">
+                    <a href="#pricing" class="hero-button primary-button">立即购买</a>
+                    <a href="#comparison" class="hero-button secondary-button">了解更多</a>
+                </div>
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>100% 病毒防护</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-lock"></i>
+                        <span>隐私保护</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-headset"></i>
+                        <span>24/7 技术支持</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="comparison" class="comparison-table">
             <h2>杀毒软件对比</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>杀毒软件</th>
-                        <th>实时保护</th>
-                        <th>勒索软件防护</th>
-                        <th>VPN功能</th>
-                        <th>密码管理器</th>
-                        <th>起始价格</th>
-                        <th>评分</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Bitdefender</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                        <td>¥199/年</td>
-                        <td>4.8/5</td>
-                    </tr>
-                    <tr>
-                        <td>Norton</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                        <td>¥249/年</td>
-                        <td>4.7/5</td>
-                    </tr>
-                    <tr>
-                        <td>Kaspersky</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                        <td class="cross">✗</td>
-                        <td class="check">✓</td>
-                        <td>¥229/年</td>
-                        <td>4.6/5</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>杀毒软件</th>
+                            <th>实时保护</th>
+                            <th>勒索软件防护</th>
+                            <th>VPN功能</th>
+                            <th>密码管理器</th>
+                            <th>系统性能影响</th>
+                            <th>起始价格</th>
+                            <th>评分</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="antivirus-name">
+                                    <img src="https://via.placeholder.com/40" alt="Bitdefender" class="antivirus-logo">
+                                    Bitdefender
+                                </div>
+                            </td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td>低</td>
+                            <td>¥199/年</td>
+                            <td>4.8/5</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="antivirus-name">
+                                    <img src="https://via.placeholder.com/40" alt="Norton" class="antivirus-logo">
+                                    Norton
+                                </div>
+                            </td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td>中</td>
+                            <td>¥249/年</td>
+                            <td>4.7/5</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="antivirus-name">
+                                    <img src="https://via.placeholder.com/40" alt="Kaspersky" class="antivirus-logo">
+                                    Kaspersky
+                                </div>
+                            </td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="cross">✗</td>
+                            <td class="check">✓</td>
+                            <td>低</td>
+                            <td>¥229/年</td>
+                            <td>4.6/5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
         <section id="features" class="features">
             <h2>核心功能对比</h2>
             <div class="feature-grid">
                 <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
                     <h3>实时保护</h3>
-                    <p>持续监控并拦截威胁</p>
+                    <p>持续监控并拦截威胁，保护您的设备安全</p>
                 </div>
                 <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
                     <h3>勒索软件防护</h3>
-                    <p>高级加密攻击防护</p>
+                    <p>高级加密攻击防护，保护您的数据安全</p>
                 </div>
                 <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
                     <h3>隐私保护</h3>
-                    <p>VPN和密码管理器集成</p>
+                    <p>VPN和密码管理器集成，全方位保护隐私</p>
                 </div>
                 <div class="feature-card">
-                    <h3>性能影响</h3>
-                    <p>最小化系统资源占用</p>
+                    <div class="feature-icon">⚡</div>
+                    <h3>性能优化</h3>
+                    <p>智能资源管理，最小化系统性能影响</p>
                 </div>
             </div>
         </section>
 
+        <section class="testimonial">
+            <h2>用户评价</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"这是我用过的最好的杀毒软件，界面简洁，功能强大，而且不会影响系统性能。"</p>
+                    <p class="testimonial-author">- 张先生，北京</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"客服响应速度快，解决问题专业，值得推荐！"</p>
+                    <p class="testimonial-author">- 李女士，上海</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"性价比很高，功能齐全，保护效果很好。"</p>
+                    <p class="testimonial-author">- 王先生，广州</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="guarantee">
+            <div class="guarantee-content">
+                <div class="guarantee-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>60天退款保证</h2>
+                <p>我们对自己的产品充满信心。如果您对服务不满意，60天内可申请全额退款。</p>
+            </div>
+        </section>
+
         <section id="pricing" class="pricing">
-            <h2>价格方案</h2>
+            <h2>限时优惠价格</h2>
             <div class="pricing-grid">
                 <div class="pricing-card">
+                    <div class="discount-badge">限时优惠</div>
                     <h3>基础版</h3>
-                    <div class="price">¥199<span>/年</span></div>
+                    <div class="price">
+                        <span class="original-price">¥399</span>
+                        ¥199<span>/年</span>
+                    </div>
+                    <div class="savings">节省 50%</div>
                     <ul>
                         <li>实时保护</li>
                         <li>恶意软件扫描</li>
                         <li>基础防火墙</li>
+                        <li>邮件保护</li>
+                        <li>基础技术支持</li>
                     </ul>
+                    <button class="cta-button">立即购买</button>
                 </div>
                 <div class="pricing-card featured">
+                    <div class="discount-badge">最受欢迎</div>
                     <h3>高级版</h3>
-                    <div class="price">¥299<span>/年</span></div>
+                    <div class="price">
+                        <span class="original-price">¥599</span>
+                        ¥299<span>/年</span>
+                    </div>
+                    <div class="savings">节省 50%</div>
                     <ul>
                         <li>所有基础功能</li>
                         <li>勒索软件防护</li>
                         <li>VPN功能</li>
                         <li>密码管理器</li>
+                        <li>高级技术支持</li>
                     </ul>
+                    <button class="cta-button">立即购买</button>
                 </div>
                 <div class="pricing-card">
+                    <div class="discount-badge">旗舰版</div>
                     <h3>旗舰版</h3>
-                    <div class="price">¥399<span>/年</span></div>
+                    <div class="price">
+                        <span class="original-price">¥799</span>
+                        ¥399<span>/年</span>
+                    </div>
+                    <div class="savings">节省 50%</div>
                     <ul>
                         <li>所有高级功能</li>
                         <li>家庭保护</li>
                         <li>云备份</li>
                         <li>24/7支持</li>
+                        <li>优先技术支持</li>
                     </ul>
+                    <button class="cta-button">立即购买</button>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>© 2024 杀毒软件对比. 保留所有权利.</p>
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>关于我们</h4>
+                <p>我们提供专业的杀毒软件对比评测，帮助用户选择最适合的安全解决方案。</p>
+            </div>
+            <div class="footer-section">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#comparison">软件对比</a></li>
+                    <li><a href="#features">功能特点</a></li>
+                    <li><a href="#pricing">价格方案</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>联系我们</h4>
+                <p>邮箱：contact@antivirus-compare.com</p>
+                <p>工作时间：周一至周五 9:00-18:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 杀毒软件对比. 保留所有权利.</p>
+        </div>
     </footer>
+
+    <script>
+        // 倒计时功能
+        function updateCountdown() {
+            const countdownElement = document.querySelector('.countdown');
+            let [hours, minutes, seconds] = countdownElement.textContent.split(':').map(Number);
+            
+            setInterval(() => {
+                seconds--;
+                if (seconds < 0) {
+                    seconds = 59;
+                    minutes--;
+                }
+                if (minutes < 0) {
+                    minutes = 59;
+                    hours--;
+                }
+                if (hours < 0) {
+                    hours = 23;
+                }
+                
+                countdownElement.textContent = `剩余时间：${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            }, 1000);
+        }
+
+        // 页面加载完成后启动倒计时
+        document.addEventListener('DOMContentLoaded', updateCountdown);
+    </script>
 </body>
 </html> 
